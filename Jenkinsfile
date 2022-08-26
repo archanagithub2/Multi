@@ -9,9 +9,6 @@ pipeline{
     }
     stage('cat README')
     {
-        when {
-      branch 'source1'
-      }
       steps
       {
         sh 'cat README.md'
@@ -19,9 +16,6 @@ pipeline{
     }
         stage('Printing Hello')
     {
-        when {
-      branch 'source2'
-      }
       steps
       {
         echo 'hello'
@@ -29,9 +23,6 @@ pipeline{
     }
         stage('Greeting')
     {
-      when {
-      branch 'source1'
-      }
       steps
       {
         echo 'Hello'
